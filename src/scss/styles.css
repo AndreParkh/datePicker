@@ -1,0 +1,223 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #283041;
+  height: 100vh;
+}
+
+.calendar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendar__wrapper {
+  position: absolute;
+  bottom: 28px;
+  right: 0;
+  width: 184px;
+}
+.calendar__body {
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  background-color: #3D4454;
+  color: #fff;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.calendar__header {
+  margin: 0px 5px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  font-size: 10px;
+}
+.calendar__header p {
+  margin: 0;
+  transition: all 0.1s ease;
+}
+.calendar__header p:hover {
+  transition: all 0.1s ease;
+  cursor: pointer;
+  color: #286AFF;
+}
+.calendar__header__arrows {
+  gap: 4px;
+  display: flex;
+  align-items: center;
+}
+.calendar__header__arrow_up {
+  display: flex;
+  width: 20px;
+  height: 7px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.calendar__header__arrow_down {
+  display: flex;
+  width: 20px;
+  height: 7px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+.calendar__selectFild__body {
+  margin: 8px 0px 0px 0px;
+}
+.calendar__week__names {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px 1px;
+  height: 20px;
+  font-weight: 400;
+  font-size: 8px;
+  text-align: center;
+  align-items: center;
+}
+.calendar__days {
+  font-size: 10px;
+  font-weight: 400;
+  text-align: center;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr;
+  gap: 4px 4px;
+}
+.calendar__day {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  padding: 3px;
+  transition: all 0.1s ease;
+}
+.calendar__day:hover {
+  transition: all 0.1s ease;
+  background-color: #586fbb;
+  cursor: pointer;
+}
+.calendar__additional__day {
+  color: #828BA5;
+  cursor: pointer;
+}
+.calendar__selected__item {
+  color: #fff;
+  background-color: #286AFF;
+}
+.calendar__selected__item:hover {
+  background-color: #586fbb;
+}
+.calendar__additional__month {
+  color: #828BA5;
+  cursor: pointer;
+}
+.calendar__pick__item {
+  box-sizing: border-box;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: all 0.1s ease;
+}
+.calendar__pick__item:hover {
+  transition: all 0.1s ease;
+  background-color: #586fbb;
+  cursor: pointer;
+}
+.calendar__pick__item__container {
+  font-weight: 400;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2px 12px;
+  font-size: 12px;
+}
+
+.dayInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0px 0px 4px 0px;
+  padding: 10px 3px 0px 10px;
+  box-sizing: border-box;
+  width: 184px;
+  height: 129px;
+  border-radius: 4px;
+  background: #3D4454;
+}
+.dayInfo__header {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 13px;
+  color: #7EA6FF;
+}
+.dayInfo__body {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  margin: 0;
+}
+.dayInfo__body::-webkit-scrollbar {
+  width: 4px;
+  background: #3D4454;
+}
+.dayInfo__body::-webkit-scrollbar-thumb {
+  background: #286AFF;
+  border-radius: 2px;
+}
+.dayInfo__body p {
+  margin: 0px 0px 8px 0px;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: 0em;
+  color: #fff;
+}
+.dayInfo__body img {
+  width: 164px;
+  background-color: #fff;
+}
+
+.btnShowCalendar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  outline: none;
+  background-color: #3D4454;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.btnShowCalendar path {
+  transition: all 0.3s ease;
+}
+.btnShowCalendar__active path {
+  stroke: #fff;
+}
+.btnShowCalendar:hover path {
+  stroke: #fff;
+  transition: all 0.2s ease;
+}/*# sourceMappingURL=styles.css.map */

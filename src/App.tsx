@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './scss/styles.css';
+
+import { Calendar } from './components/Calendar';
+import {CalendarIcon} from "./components/Icon"
 
 function App() {
+	const [selectedDate, setSelectedDate] = useState(new Date)
+	const [isShownCalendar, setIsShownCalendar] = useState(false)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+		<div className="calendar">
+			{isShownCalendar && <Calendar 
+				selectedDate={selectedDate} 
+				selectDate={(date) => setSelectedDate(date)} />}
+			<button 
+				onClick={() => {
+					setIsShownCalendar(!isShownCalendar)
+					if (isShownCalendar) setSelectedDate(new Date())
+				}}
+				className={[
+					"btnShowCalendar",
+					isShownCalendar ? "btnShowCalendar__active": ''
+					].join(' ')}>
+				<CalendarIcon />
+			</button>
+		</div>
     </div>
   );
 }
-
 export default App;
